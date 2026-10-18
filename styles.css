@@ -1,0 +1,155 @@
+
+/* ตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Tahoma", sans-serif;
+    background-color: #fff5f7;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* ส่วนหัวเว็บไซต์ */
+header {
+    background-color: #f8b8cb;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+/* กล่องเนื้อหาหลัก */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* กรอบแต่ละหัวข้อ */
+section {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 22px 25px;
+    border: 1px solid #f5d5df;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(180, 100, 130, 0.08);
+}
+
+/* หัวข้อ */
+h2 {
+    color: #d85d88;
+    font-size: 22px;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f9dce5;
+}
+
+/* รายการความฝัน */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    padding: 4px 0;
+}
+
+li::marker {
+    color: #e78eaa;
+}
+
+/* รูปภาพ */
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.fan-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    text-align: center;
+    background-color: #fff8fa;
+    border: 1px solid #f3cfdb;
+    border-radius: 12px;
+}
+
+.fan-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.fan-card p {
+    color: #d85d88;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* ท้ายเว็บไซต์ */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #a47787;
+    font-size: 14px;
+}
+
+/* รองรับโทรศัพท์ */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
+
+/* กรอบรูปหัวใจ */
+.fan {
+    display: block;
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    object-fit: cover;
+
+    /* ตัดรูปภาพให้เป็นรูปหัวใจ */
+    clip-path: polygon(
+        50% 95%,
+        10% 58%,
+        0% 35%,
+        2% 20%,
+        12% 8%,
+        27% 5%,
+        40% 12%,
+        50% 25%,
+        60% 12%,
+        73% 5%,
+        88% 8%,
+        98% 20%,
+        100% 35%,
+        90% 58%
+    );
+
+    transition: transform 0.3s ease;
+}
+
+.fan-card img:hover {
+    transform: scale(1.05);
+}
